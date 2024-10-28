@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Clothes</title>
+</head>
+<body>
+    <h1>Edit Clothes</h1>
+    <form action="/clothes/edit" method="post">
+        <input type="hidden" name="id" th:value="${clothe.id}"/>
+        <p>Type: <input type="text" name="type" th:value="${clothe.type}"/></p>
+        <p>Gender: <input type="text" name="gender" th:value="${clothe.gender}"/></p>
+        <p>Price: <input type="text" name="price" th:value="${clothe.price}"/></p>
+        <button type="submit">Update Clothes</button>
+    </form>
+    <a href="/clothes/display">Cancel</a>
+</body>
+</html>
